@@ -36,7 +36,15 @@ print("\nE3")
 list_1 = ["foo", 2, "bar", 3, "baz", "spam", 4]
 list_2 = ["1", 2, "3", 3, "4", "foo", "pasm", "bar"]
 common_elements = set(list_1).intersection(set(list_2))
-print(f"Common elements: {common_elements}")
+print(f"Common elements (set intersection): {common_elements}")
+## Long way
+in_both_lists = []
+for item1 in list_1:
+    for item2 in list_2:
+        if item1==item2:
+            in_both_lists.append(item1)
+common_elements = set(in_both_lists)
+print(f"Common elements (list loop): {common_elements}")
 
 ## Exercise 4:
 """
