@@ -35,7 +35,7 @@ print(f"Max scores: {max_score}")
 print("\nE3")
 list_1 = ["foo", 2, "bar", 3, "baz", "spam", 4]
 list_2 = ["1", 2, "3", 3, "4", "foo", "pasm", "bar"]
-common_elements = set(list_1 + list_2)
+common_elements = set(list_1).intersection(set(list_2))
 print(f"Common elements: {common_elements}")
 
 ## Exercise 4:
