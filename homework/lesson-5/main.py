@@ -93,7 +93,7 @@ def play_game(user_choice: int):
         outcome = "You lose."
     elif user_choice == SCISSORS and computer_choice == PAPER:
         outcome = "You win."
-    print(f"User choice: {choice_map[user_choice]}, Computer choice: {choice_map[computer_choice]}: {outcome}")
+    print(f"User choice: {choice_map[user_choice]}, Computer choice: {choice_map[computer_choice]}, GAME OUTCOME: {outcome}")
     return outcome
 
 play_game(SCISSORS)
