@@ -8,7 +8,9 @@ import datetime
 
 # Get the current date and time
 now = datetime.datetime.now()
-print(f"Current date and time : {now.strftime('%Y-%m-%d %H:%M:%S')}")
+format = '%Y-%m-%d %H:%M:%S'
+print(f"Current date and time unformatted: {now}")
+print(f"Current date and time formatted in {format}: {now.strftime(format)}")
 
 
 # ## HOMEWORK 2
