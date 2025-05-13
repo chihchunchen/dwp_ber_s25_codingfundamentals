@@ -69,7 +69,7 @@ def pick_random_name(list_names):
 ### Preparation
 Run the following code a few times to understand what is happening. The 'inquire' function will ask 3 questions for each person. You don't need to understand how the 'inquire' function works, you just need to use it. You will be able to select one of two options for each question asked. You will then need to do some calculations based on the result created by the 'inquire' function.
 
-```python
+
 import inquirer
 import random
 
