@@ -195,7 +195,7 @@ def sum_transactions(trans_dict):
 def sum_meals(meal_dicts):
     return [{name: f"${sum_transactions(transactions):.0f}"} for d in meal_dicts for name, transactions in d.items()]
 
-print(f"Totals with convert_dollars: {sum_meals(result)}")
+print(f"Totals with convert_dollars function: {sum_meals(result)}")
 
 
 #**Bonus**: - Replace the value of the name variable with your own name.
@@ -225,17 +225,24 @@ def play_game():
 ## Exercise 4: Credit Card Masking
 #Complete the `mask_credit_card_number` function that takes in a 16-digit credit card number and masks all but the last 4 digits.
 
+def is_int_string(a_string):
+    try:
+        int(a_string)
+        return True
+    except:
+        return False
 
 sample_credit_card_number = '1234567890987654'
 expected_credit_card_result = 'XXXXXXXXXXXX7654'
 
 def mask_credit_card_number(credit_card_number):
-    masked_credit_card_number = ''
-    # write your code here!
-    return masked_credit_card_number
+    if isinstance(credit_card_number, str) and len(credit_card_number)==16 and is_int_string(credit_card_number):
+        masked_credit_card_number = f"XXXXXXXXXXXX{credit_card_number[-4:]}"
+        
+        return masked_credit_card_number
 
 # Uncomment the lines below to test your answer 👇👇👇
-# print('Expected result: ', expected_credit_card_result)
-# result = mask_credit_card_number(sample_credit_card_number)
-# print('Your result:', result)
+print('Expected result: ', expected_credit_card_result)
+result = mask_credit_card_number(sample_credit_card_number)
+print('Your result:', result)
 
